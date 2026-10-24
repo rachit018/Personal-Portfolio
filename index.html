@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="obsidian">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <title>Rachit Verma | B.Tech CSE (Data Science) | Aspiring Software Engineer</title>
+  <meta name="description" content="Personal portfolio of Rachit Verma — B.Tech Computer Science &amp; Engineering (Specialization: Data Science) undergraduate. Passionate about Data Structures &amp; Algorithms in C++, JavaScript, TypeScript, and Data Science." />
+  <meta name="keywords" content="Rachit Verma, B.Tech CSE, Data Science, Data Structures, Algorithms, C++, JavaScript, TypeScript, Portfolio, Student, Fresher, Software Engineer" />
+  <meta name="author" content="Rachit Verma" />
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Rachit Verma | B.Tech CSE (Data Science) | Aspiring Software Engineer" />
+  <meta property="og:description" content="Explore skills, learning projects, academic coursework, and DSA problem-solving journey of Rachit Verma." />
+  <meta property="og:image" content="assets/avatar.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rachit Verma | B.Tech CSE (Data Science) | Aspiring Software Engineer" />
+  <meta name="twitter:description" content="Explore skills, learning projects, academic coursework, and DSA problem-solving journey of Rachit Verma." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/avatar.svg" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Background Canvas for Interactive Constellation Network -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Ambient Glowing Background Accents -->
+  <div class="ambient-glow-top"></div>
+  <div class="ambient-glow-mid"></div>
+
+  <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Home">
+        <span class="brand-icon">R</span>
+        <span class="brand-title">Rachit<span class="brand-dot">.dev</span></span>
+      </a>
+
+      <!-- Desktop & Mobile Links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Education &amp; Journey</a></li>
+        <li><a href="#terminal" class="nav-link">Terminal</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Controls & CTA -->
+      <div class="nav-actions">
+        <!-- Sound Toggle Button -->
+        <button id="sound-toggle-btn" class="nav-icon-btn" aria-label="Toggle UI sound effects" title="Toggle audio sound effects">
+          <!-- Populated by JS -->
+        </button>
+
+        <!-- Theme Switcher Dropdown -->
+        <div class="theme-switcher">
+          <button id="theme-toggle-btn" class="nav-icon-btn" aria-label="Select Color Theme" title="Choose color theme">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"/>
+              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+            </svg>
+          </button>
+          <div class="theme-dropdown" id="theme-dropdown">
+            <button class="theme-option" data-theme-choice="obsidian">
+              <span class="theme-color-dot" style="background: #6366f1;"></span>
+              <span>Obsidian Blue</span>
+            </button>
+            <button class="theme-option" data-theme-choice="emerald">
+              <span class="theme-color-dot" style="background: #10b981;"></span>
+              <span>Emerald Matrix</span>
+            </button>
+            <button class="theme-option" data-theme-choice="violet">
+              <span class="theme-color-dot" style="background: #a855f7;"></span>
+              <span>Violet Cyber</span>
+            </button>
+            <button class="theme-option" data-theme-choice="light">
+              <span class="theme-color-dot" style="background: #e2e8f0; border: 1px solid #94a3b8;"></span>
+              <span>Clean Daylight</span>
+            </button>
+          </div>
+        </div>
+
+        <a href="#contact" class="nav-cta nav-cta-hide-mobile">Contact Me</a>
+
+        <!-- Mobile Hamburger Menu Button -->
+        <button class="hamburger" id="hamburger" aria-label="Open mobile navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <!-- Hero Details -->
+        <div class="hero-content">
+          <!-- Availability Badge -->
+          <div class="status-badge">
+            <div class="status-dot-pulse">
+              <span class="pulse-ring"></span>
+              <span class="pulse-core"></span>
+            </div>
+            <span>Seeking Software Engineering &amp; Data Science Internships</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Rachit Verma</span>
+          </h1>
+
+          <!-- Typewriter Animated Subtitle -->
+          <div class="typewriter-wrapper">
+            <span id="typewriter-text"></span>
+            <span class="typewriter-cursor"></span>
+          </div>
+
+          <p class="hero-description">
+            B.Tech Computer Science &amp; Engineering student specializing in Data Science. Dedicated to mastering Data Structures &amp; Algorithms in C++, modern web development using JavaScript &amp; TypeScript, and data-driven problem solving.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+              <span>Explore Projects</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <span>Get In Touch</span>
+            </a>
+            <button class="btn btn-secondary btn-open-resume">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="12" y1="18" x2="12" y2="12"/>
+                <line x1="9" y1="15" x2="15" y2="15"/>
+              </svg>
+              <span>View Resume</span>
+            </button>
+          </div>
+
+          <!-- Social Channels Row -->
+          <div class="hero-socials">
+            <a href="mailto:vermarachit854@gmail.com" class="social-pill" title="Email Rachit" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </a>
+            <a href="tel:+918429886364" class="social-pill" title="Call Rachit" aria-label="Phone">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-pill" title="GitHub Profile" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-pill" title="LinkedIn Profile" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer" class="social-pill" title="DSA Problem Solving" aria-label="LeetCode">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Avatar & Graphic Card -->
+        <div class="hero-visual-card">
+          <div class="avatar-wrapper">
+            <div class="avatar-glow-ring"></div>
+            <div class="avatar-img-container">
+              <img src="assets/avatar.svg" alt="Rachit Verma Avatar" class="avatar-img" />
+            </div>
+
+            <!-- Floating Badges -->
+            <div class="floating-badge badge-top-right">
+              <div class="badge-icon-box">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"/>
+                  <polyline points="8 6 2 12 8 18"/>
+                </svg>
+              </div>
+              <span>DSA in C++</span>
+            </div>
+
+            <div class="floating-badge badge-bottom-left">
+              <div class="badge-icon-box">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+              </div>
+              <span>Data Science &amp; TS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         METRICS / STUDENT STATS STRIP
+         ========================================================================== -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid" id="stats-grid">
+          <!-- Populated dynamically by app.js from config.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT & CORE PILLARS SECTION
+         ========================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Computer Science &amp; <span class="gradient-text">Data Science Student</span></h2>
+          <p class="section-subtitle">A glimpse into my academic background, technical focus, and programming mindset.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-narrative">
+            <p>
+              I am an undergraduate student pursuing my <strong>B.Tech in Computer Science and Engineering with a specialization in Data Science</strong>.
+            </p>
+            <p>
+              My primary technical focus is on building solid software fundamentals: writing efficient, well-structured <strong>Data Structures and Algorithms in C++</strong>, understanding time and space complexities, and developing interactive web applications using <strong>JavaScript and TypeScript</strong>.
+            </p>
+            <p>
+              With an analytical foundation from my Data Science curriculum, I love solving logic-heavy problems, learning modern tech stacks quickly, and collaborating on meaningful engineering projects.
+            </p>
+            <div class="about-features-list">
+              <div class="about-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>C++ &amp; STL Problem Solving</span>
+              </div>
+              <div class="about-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>JavaScript &amp; TypeScript</span>
+              </div>
+              <div class="about-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Data Science Foundations</span>
+              </div>
+              <div class="about-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Eager Learner &amp; Team Player</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pillars Grid -->
+          <div class="pillars-grid" id="pillars-grid">
+            <!-- Populated dynamically by app.js from config.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SKILLS MATRIX SECTION
+         ========================================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Technical Skills</span>
+          <h2 class="section-title">Core Languages &amp; <span class="gradient-text">Competencies</span></h2>
+          <p class="section-subtitle">Interactive skills catalog highlighting C++, Data Structures, JavaScript, TypeScript, and Data Science concepts.</p>
+        </div>
+
+        <!-- Filter & Search Toolbar -->
+        <div class="filter-toolbar">
+          <div class="filter-tabs">
+            <button class="filter-btn skill-filter-btn active" data-category="all">All Skills</button>
+            <button class="filter-btn skill-filter-btn" data-category="backend">C++ &amp; DSA</button>
+            <button class="filter-btn skill-filter-btn" data-category="frontend">JavaScript / TS / Web</button>
+            <button class="filter-btn skill-filter-btn" data-category="ai">Data Science</button>
+            <button class="filter-btn skill-filter-btn" data-category="tools">Tools &amp; Databases</button>
+          </div>
+
+          <div class="search-input-wrapper">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="text" id="skill-search" class="search-input" placeholder="Search skills (e.g. C++, DSA, TypeScript)..." aria-label="Search skills" />
+          </div>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skills-grid">
+          <!-- Populated dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FEATURED PROJECTS & PRACTICE WORK
+         ========================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Projects &amp; Learning</span>
+          <h2 class="section-title">Academic &amp; <span class="gradient-text">Hands-On Projects</span></h2>
+          <p class="section-subtitle">Practical applications and academic repositories engineered to apply C++, web technologies, and data science concepts.</p>
+        </div>
+
+        <!-- Filter & Search Toolbar -->
+        <div class="filter-toolbar">
+          <div class="filter-tabs">
+            <button class="filter-btn project-filter-btn active" data-category="all">All Projects</button>
+            <button class="filter-btn project-filter-btn" data-category="tools">DSA &amp; C++</button>
+            <button class="filter-btn project-filter-btn" data-category="fullstack">Web (JS/TS)</button>
+            <button class="filter-btn project-filter-btn" data-category="ai">Data Science</button>
+          </div>
+
+          <div class="search-input-wrapper">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="text" id="project-search" class="search-input" placeholder="Filter projects by title, stack, or category..." aria-label="Search projects" />
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+          <!-- Populated dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         EDUCATION & LEARNING JOURNEY TIMELINE
+         ========================================================================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Learning Journey</span>
+          <h2 class="section-title">Education &amp; <span class="gradient-text">Academic Timeline</span></h2>
+          <p class="section-subtitle">My academic degree program, self-directed algorithmic practice, and technical development.</p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+          <div id="timeline-list">
+            <!-- Populated dynamically by app.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE TERMINAL (DEVELOPER EASTER EGG)
+         ========================================================================== -->
+    <section class="terminal-section" id="terminal">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 2rem;">
+          <span class="section-tag">Interactive CLI</span>
+          <h2 class="section-title">Developer <span class="gradient-text">Console Sandbox</span></h2>
+          <p class="section-subtitle">Interact with Rachit's portfolio via terminal. Try running commands to explore skills and education!</p>
+        </div>
+
+        <div class="terminal-window">
+          <!-- Window Title Bar -->
+          <div class="terminal-bar">
+            <div class="terminal-controls">
+              <span class="terminal-ctrl-btn ctrl-red"></span>
+              <span class="terminal-ctrl-btn ctrl-yellow"></span>
+              <span class="terminal-ctrl-btn ctrl-green"></span>
+            </div>
+            <span class="terminal-title">rachit-verma@cse-datascience: ~ (bash)</span>
+            <span style="font-size: 0.72rem; color: #64748b;">UTF-8</span>
+          </div>
+
+          <!-- Terminal Output History -->
+          <div class="terminal-body">
+            <div class="terminal-history" id="terminal-history">
+              <!-- Populated by terminal.js -->
+            </div>
+
+            <!-- Terminal Active Input Line -->
+            <div class="terminal-input-row">
+              <span class="terminal-prompt">visitor@rachit-verma:~$</span>
+              <input type="text" id="terminal-input" class="terminal-input" placeholder="Type a command (try 'help' or 'skills')..." autocomplete="off" spellcheck="false" />
+            </div>
+          </div>
+
+          <!-- Quick Action Buttons Bar -->
+          <div class="terminal-quick-bar">
+            <span style="font-size: 0.76rem; color: #64748b; margin-right: 0.5rem;">Quick Commands:</span>
+            <button class="quick-cmd-btn" data-cmd="help">help</button>
+            <button class="quick-cmd-btn" data-cmd="skills">skills</button>
+            <button class="quick-cmd-btn" data-cmd="projects">projects</button>
+            <button class="quick-cmd-btn" data-cmd="about">about</button>
+            <button class="quick-cmd-btn" data-cmd="contact">contact</button>
+            <button class="quick-cmd-btn" data-cmd="sudo hire-me">sudo hire-me</button>
+            <button class="quick-cmd-btn" data-cmd="matrix">matrix</button>
+            <button class="quick-cmd-btn" data-cmd="clear">clear</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TESTIMONIALS & ENDORSEMENTS
+         ========================================================================== -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Feedback</span>
+          <h2 class="section-title">Academic &amp; Peer <span class="gradient-text">Feedback</span></h2>
+          <p class="section-subtitle">Perspectives on work ethic, technical diligence, and passion for problem solving.</p>
+        </div>
+
+        <div class="testimonials-grid" id="testimonials-grid">
+          <!-- Populated dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT & REACH OUT
+         ========================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Connect with <span class="gradient-text">Rachit Verma</span></h2>
+          <p class="section-subtitle">Interested in offering an internship, entry-level opportunity, or collaborating on a project? Feel free to reach out!</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Details Cards -->
+          <div class="contact-details">
+            <!-- Email Item -->
+            <div class="contact-card-item">
+              <div class="contact-item-left">
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-info-label">Email Address</div>
+                  <div class="contact-info-val" id="contact-email-val">vermarachit854@gmail.com</div>
+                </div>
+              </div>
+              <button class="copy-btn" data-copy="vermarachit854@gmail.com" title="Copy email">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+
+            <!-- Phone Item -->
+            <div class="contact-card-item">
+              <div class="contact-item-left">
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-info-label">Phone Number</div>
+                  <div class="contact-info-val" id="contact-phone-val">+91 8429886364</div>
+                </div>
+              </div>
+              <button class="copy-btn" data-copy="+918429886364" title="Copy phone">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+
+            <!-- Education / Location Item -->
+            <div class="contact-card-item">
+              <div class="contact-item-left">
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-info-label">Academic Status &amp; Location</div>
+                  <div class="contact-info-val" id="contact-location-val">B.Tech CSE (Data Science) Student · India</div>
+                </div>
+              </div>
+              <span class="timeline-type-badge">Open to Internships</span>
+            </div>
+
+            <!-- Local Time & Status Widget -->
+            <div class="local-time-card">
+              <div class="clock-pulse"></div>
+              <div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Current Local Time</div>
+                <div id="live-local-time" style="font-family: var(--font-mono); font-weight: 700; color: var(--text-primary); margin-top: 0.15rem;">
+                  <!-- Live Clock -->
+                </div>
+              </div>
+              <div style="margin-left: auto; font-size: 0.82rem; color: #10b981; font-weight: 600;">
+                ● Fast Email Response
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="contact-form-card">
+            <form id="contact-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Your Name</label>
+                  <input type="text" id="contact-name" class="form-input" placeholder="e.g. Recruiter / Collaborator" required />
+                </div>
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Email Address</label>
+                  <input type="email" id="contact-email" class="form-input" placeholder="recruiter@company.com" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subject</label>
+                <input type="text" id="contact-subject" class="form-input" placeholder="Internship Opportunity / Project Inquiry" required />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message Details</label>
+                <textarea id="contact-message" class="form-textarea" maxlength="500" placeholder="Hello Rachit, we came across your portfolio and would love to connect regarding..." required></textarea>
+                <div class="form-char-count" id="msg-char-count">0 / 500</div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.85rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"/>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+                <span>Send Message to Rachit</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="#hero" class="nav-brand">
+          <span class="brand-icon">R</span>
+          <span class="brand-title">Rachit<span class="brand-dot">.dev</span></span>
+        </a>
+        <div class="footer-links">
+          <a href="#about" class="footer-link">About</a>
+          <a href="#skills" class="footer-link">Skills</a>
+          <a href="#projects" class="footer-link">Projects</a>
+          <a href="#experience" class="footer-link">Education</a>
+          <a href="#terminal" class="footer-link">Terminal</a>
+          <a href="#contact" class="footer-link">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Rachit Verma. All rights reserved.
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span>B.Tech in Computer Science &amp; Engineering (Specialization: Data Science)</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       PROJECT DETAILS MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3 id="modal-project-title">Project Title</h3>
+          <div class="modal-subtitle" id="modal-project-subtitle">Project Subtitle</div>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div>
+          <h4 class="modal-section-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="16" x2="12" y2="12"/>
+              <line x1="12" y1="8" x2="12.01" y2="8"/>
+            </svg>
+            Project Summary &amp; Learning Objectives
+          </h4>
+          <p id="modal-project-overview" style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;"></p>
+        </div>
+
+        <div>
+          <h4 class="modal-section-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+            Key Milestones &amp; Validations
+          </h4>
+          <div class="modal-metric-grid" id="modal-project-metrics">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <div>
+          <h4 class="modal-section-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+              <polyline points="2 17 12 22 22 17"/>
+              <polyline points="2 12 12 17 22 12"/>
+            </svg>
+            Design &amp; Implementation Details
+          </h4>
+          <div class="modal-architecture-box" id="modal-project-architecture">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <div>
+          <h4 class="modal-section-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+            Technologies Utilized
+          </h4>
+          <div class="project-tech-chips" id="modal-project-tech">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a href="#" id="modal-btn-github" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 0.55rem 1.1rem; font-size: 0.88rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+          <span>GitHub Code</span>
+        </a>
+        <a href="#" id="modal-btn-live" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.55rem 1.25rem; font-size: 0.88rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+          <span>Live Demo</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       ATS RESUME PREVIEW & PRINT MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-doc-title">
+    <div class="modal-container" style="max-width: 820px;">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3 id="resume-doc-title">Curriculum Vitae / Resume</h3>
+          <div class="modal-subtitle">ATS-Formatted · Rachit Verma · B.Tech CSE (Data Science)</div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <button id="resume-print-btn" class="btn btn-secondary" style="padding: 0.45rem 0.9rem; font-size: 0.82rem;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 6 2 18 2 18 9"/>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+              <rect x="6" y="14" width="12" height="8"/>
+            </svg>
+            <span>Print / Save PDF</span>
+          </button>
+          <button class="modal-close-btn" id="resume-close-btn" aria-label="Close resume modal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"/>
+              <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-body" style="background: var(--bg-primary); font-family: var(--font-main);">
+        <!-- Printable Clean Header -->
+        <div style="border-bottom: 2px solid var(--border-color); padding-bottom: 1.25rem;">
+          <h2 style="font-size: 1.75rem; color: var(--text-primary);">Rachit Verma</h2>
+          <div style="font-size: 1.05rem; color: var(--accent-primary); font-weight: 600; margin-top: 0.2rem;">
+            B.Tech in Computer Science &amp; Engineering (Specialization: Data Science)
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.6rem; font-size: 0.88rem; color: var(--text-muted);">
+            <span>📍 India</span>
+            <span>✉️ vermarachit854@gmail.com</span>
+            <span>📞 +91 8429886364</span>
+            <span>🌐 github.com/vermarachit854</span>
+          </div>
+        </div>
+
+        <!-- Career Objective / Summary -->
+        <div>
+          <h4 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-primary); margin-bottom: 0.4rem;">
+            Career Objective
+          </h4>
+          <p style="font-size: 0.92rem; line-height: 1.65; color: var(--text-secondary);">
+            Enthusiastic and motivated B.Tech Computer Science &amp; Engineering student specializing in Data Science with a strong conceptual and practical foundation in Data Structures and Algorithms using C++, modern web scripting in JavaScript and TypeScript, and analytical data modeling. Seeking software development and data science internship opportunities to apply programming fundamentals to real-world engineering challenges.
+          </p>
+        </div>
+
+        <!-- Technical Skills -->
+        <div>
+          <h4 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-primary); margin-bottom: 0.5rem;">
+            Technical Skills
+          </h4>
+          <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.88rem;">
+            <div><strong>Core Languages:</strong> C++, JavaScript (ES6+), TypeScript, Python, SQL</div>
+            <div><strong>Core Competencies:</strong> Data Structures &amp; Algorithms (Arrays, Linked Lists, Trees, Graphs, Sorting), Object-Oriented Programming (OOP)</div>
+            <div><strong>Web Technologies:</strong> HTML5, CSS3, DOM Manipulation, Fetch API, Responsive Web Design</div>
+            <div><strong>Data Science Track:</strong> Exploratory Data Analysis (EDA), Statistics &amp; Probability, Data Cleaning</div>
+            <div><strong>Tools &amp; Platforms:</strong> Git, GitHub, VS Code, Linux/Bash, GDB</div>
+          </div>
+        </div>
+
+        <!-- Education Details -->
+        <div>
+          <h4 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-primary); margin-bottom: 0.5rem;">
+            Education
+          </h4>
+          <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+            <div>
+              <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--text-primary); font-size: 0.96rem;">
+                <span>Bachelor of Technology (B.Tech) — Computer Science &amp; Engineering</span>
+                <span style="color: var(--accent-primary); font-family: var(--font-mono);">Active Student</span>
+              </div>
+              <div style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.15rem;">
+                Specialization in Data Science
+              </div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.35rem;">
+                <strong>Relevant Coursework:</strong> Data Structures &amp; Algorithms, Object-Oriented Programming in C++, Database Management Systems (DBMS), Operating Systems, Statistics for Data Science, Computer Networks.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Academic & Self-Learning Projects -->
+        <div>
+          <h4 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-primary); margin-bottom: 0.75rem;">
+            Academic &amp; Learning Projects
+          </h4>
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div>
+              <div style="font-weight: 700; color: var(--text-primary); font-size: 0.93rem;">
+                Data Structures &amp; Algorithms Implementations in C++
+              </div>
+              <ul style="margin-left: 1.25rem; margin-top: 0.35rem; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+                <li>Implemented core data structures (Binary Search Trees, Linked Lists, Stacks, Queues, Heaps) and algorithms (BFS/DFS, QuickSort, MergeSort) from scratch using C++ and STL.</li>
+                <li>Conducted rigorous time and space complexity evaluations to ensure optimal asymptotic efficiency.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div style="font-weight: 700; color: var(--text-primary); font-size: 0.93rem;">
+                Interactive Developer Portfolio Website (JavaScript &amp; TypeScript)
+              </div>
+              <ul style="margin-left: 1.25rem; margin-top: 0.35rem; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+                <li>Designed and deployed a responsive single-page portfolio with dynamic multi-theme selection, real-time search filters, and an interactive Canvas particle background.</li>
+                <li>Structured cleanly with modular ES6+ JavaScript, CSS3 design tokens, and Web Audio API micro-interactions.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div style="font-weight: 700; color: var(--text-primary); font-size: 0.93rem;">
+                Exploratory Data Analysis Lab (Data Science Coursework)
+              </div>
+              <ul style="margin-left: 1.25rem; margin-top: 0.35rem; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+                <li>Performed data wrangling, missing value treatment, and statistical distribution modeling on real-world datasets.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Extracurricular & Problem Solving -->
+        <div>
+          <h4 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-primary); margin-bottom: 0.5rem;">
+            Problem Solving &amp; Soft Skills
+          </h4>
+          <div style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+            <div>• Active problem solving on competitive coding platforms in C++.</div>
+            <div>• Strong analytical reasoning, attention to detail, and rapid technical adaptability.</div>
+            <div>• Collaborative mindset, eager to contribute to engineering teams and receive code review mentorship.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/canvas-bg.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# Logs & OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Optional packages
+node_modules/
+dist/

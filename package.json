@@ -1,0 +1,13 @@
+{
+  "name": "personal-portfolio",
+  "version": "1.0.0",
+  "description": "Modern personal portfolio website showcasing skills, projects, and experience",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 3000",
+    "serve": "npx serve ."
+  },
+  "keywords": ["portfolio", "full-stack", "ai", "developer", "resume"],
+  "author": "Rachit Verma",
+  "license": "MIT"
+}
